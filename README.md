@@ -1,17 +1,22 @@
-This repository is for a technical task in C# provided by Motorpoint.
+Created 4 end points as below
 
-Clone this repository and complete the following tasks.
+1. Get list of all cars available "/Vehicles/Cars"
 
-- Add the remaining fields to the vehicle model
-- Implement an endpoint for listing all cars
-- Implement an endpoint for listing cars by make
-- Implement an endpoint for listing cars by model
-- Add any other endpoints you think are useful / relevant
+2. Get list of all cars available by make "/Vehicles/Cars/Make?make={make}"
 
-Consider the following as well.
+3. Get list of all cars available by model "/Vehicles/Cars/Model?model={model}
 
-- Error handling
-- Unit tests
+4. Get list of all cars available between a range of mileage "Vehicles/Search/Mileage?minMileage={minMileage}&maxMileage={maxMileage}"
 
-Upload the completed solution to your own GitHub and provide the link to it (ensure it is publically available).
-The solution must compile and run without any errors.
+Also written 7 test cases as below
+
+1. TestGetAllVehicles()
+2. GetCarsByMileageRange_ReturnsFilteredCars_WhenValidMileageRangeIsProvided
+3. GetCarsByMileageRange_ReturnsBadRequest_WhenMinMileageIsGreaterThanMaxMileage
+4. GetCarsByMileageRange_ReturnsBadRequest_WhenMileageRangeIsMissing
+5. GetAllCarsListByModel_ReturnsSuccessWithCorrectData
+6. GetAllCarsListByModel_ShouldReturnCorrectCars_IgnoringCase
+7. GetAllCarsListByModel_ShouldReturnAllCars_WhenNoModelProvided
+
+
+
