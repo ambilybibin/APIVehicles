@@ -87,7 +87,7 @@ namespace Vehicles.Api.Controllers
                 var cars = await _repo.GetAllCarsList();
                 if (!string.IsNullOrEmpty(model))
                 {
-                    cars = cars.Where(car => car.Make.Equals(model, StringComparison.OrdinalIgnoreCase)).ToList();//get all cars for the model
+                    cars = cars.Where(car => car.Model.Contains(model, StringComparison.OrdinalIgnoreCase)).ToList();
                 }
                 if (cars == null || !cars.Any())
                 {
